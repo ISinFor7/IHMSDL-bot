@@ -17,19 +17,19 @@ export async function invoke(client) {
 
     const role1Button = new ButtonBuilder()
         .setCustomId('IHM')
-        .setEmoji('😀')
+        .setEmoji('🎨')
         .setLabel('IHM')
         .setStyle(ButtonStyle.Primary);
 
     const role2Button = new ButtonBuilder()
         .setCustomId('SDL')
-        .setEmoji('😎')
+        .setEmoji('💻')
         .setLabel('SDL')
         .setStyle(ButtonStyle.Success);
 
     const role3Button = new ButtonBuilder()
         .setCustomId('Intru')
-        .setEmoji('🎉')
+        .setEmoji('👤')
         .setLabel('Intru')
         .setStyle(ButtonStyle.Secondary);
 
