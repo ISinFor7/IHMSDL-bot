@@ -18,10 +18,10 @@ async function invoke(interaction) {
 		const member = await interaction.guild.members.fetch(interaction.user.id);
 		if (member.roles.cache.has(roleId)) {
 			await member.roles.remove(roleId);
-			await interaction.reply({ content: 'Role removed!', ephemeral: true });
+			await interaction.reply({ content: 'Role enlevé!', flags: MessageFlags.Ephemeral });
 		} else {
 			await member.roles.add(roleId);
-			await interaction.reply({ content: 'Role added!', ephemeral: true });
+			await interaction.reply({ content: 'Role ajouté!', flags: MessageFlags.Ephemeral });
 		}
 	}
 }
