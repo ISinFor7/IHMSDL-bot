@@ -4,7 +4,7 @@
 	"description": "",
 	"main": "Bot.js",
 	"keywords": [],
-	"author": "YB Lilo",
+	"author": "YB Lilo/ISinFor7",
 	"license": "MIT",
 	"dependencies": {
 		"discord.js": "^14.16.2",
