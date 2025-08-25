@@ -1,6 +1,7 @@
 import {} from 'dotenv/config';
 import fs from 'fs';
 import { Client, GatewayIntentBits } from 'discord.js';
+import net from 'net';
 
 const client = new Client({ intents: [GatewayIntentBits.Guilds] });
 
@@ -22,3 +23,8 @@ for (let event of events) {
 }
 
 client.login(process.env.BOT_TOKEN);
+
+// Google Cloud health checks
+net.createServer().listen(8080, () => {
+	console.log('Health check server listening on port 8080');
+});
