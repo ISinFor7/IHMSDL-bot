@@ -1,7 +1,7 @@
 import fs from 'fs';
 
 const once = true;
-const name = 'ready';
+const name = 'clientReady';
 
 async function invoke(client) {
 	const commands = fs

@@ -2,7 +2,7 @@ import { Events } from 'discord.js';
 import { ButtonBuilder, ButtonStyle, ActionRowBuilder } from 'discord.js';
 
 export const once = true;
-export const name = 'ready';
+export const name = 'roleSelector';
 
 export async function invoke(client) {
     const guildId = '1408457354059714742';
