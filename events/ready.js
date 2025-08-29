@@ -20,8 +20,8 @@ async function invoke(client) {
 	client.application.commands.set(commandsArray);
 
 	console.log(`Successfully logged in as ${client.user.tag}!`);
-	const guildId = '669076445653368857';
-    const channelId = '669076445653368861';
+	const guildId = '1408457354059714742';
+    const channelId = '1408457354638262363';
     const guild = await client.guilds.fetch(guildId);
     const channel = await guild.channels.fetch(channelId);
 
