@@ -6,7 +6,7 @@ const name = 'interactionCreate';
 async function invoke(interaction) {
     if (interaction.isChatInputCommand()) {
         // Defer
-        await interaction.deferReply();
+        //await interaction.deferReply({ flags: MessageFlags.Ephemeral });
         await (await import(`#commands/${interaction.commandName}`)).invoke(interaction);
         if (interaction.commandName === 'createvote') {
             setTimeout(async () => {

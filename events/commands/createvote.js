@@ -30,6 +30,7 @@ const create = () => {
 };
 
 async function invoke(interaction) {
+	await interaction.deferReply({  });
 	const votes = [
 		interaction.options.getString('vote1'),
 		interaction.options.getString('vote2'),
@@ -50,7 +51,7 @@ async function invoke(interaction) {
 
 	const row = new ActionRowBuilder().addComponents(...buttons);
 
-	await interaction.reply({
+	await interaction.editReply({
 		content: interaction.options.getString('description'),
 		components: [row],
 	});

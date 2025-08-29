@@ -11,14 +11,14 @@ const create = () => {
 	return command.toJSON();
 };
 
-const invoke = (interaction) => {
+const invoke = async (interaction) => {
 	const user = interaction.options.getUser('user');
-
 	if (user !== null) {
 		interaction.reply({ content: `Hey ${user}! ${interaction.user} te dis bonjour!` });
 	} else {
-		interaction.reply({
-			content: 'Pong!',
+		const sent = await interaction.reply({ content: 'Pinging...', withResponse: true, flags: MessageFlags.Ephemeral } );
+		interaction.editReply({
+			content: `Pong : ${sent.resource.message.createdTimestamp - interaction.createdTimestamp}ms`,
 			flags: MessageFlags.Ephemeral,
 		});
 	}
