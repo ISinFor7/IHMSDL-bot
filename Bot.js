@@ -17,7 +17,11 @@ for (let event of events) {
 		});
 	} else {
 		client.on(eventFile.name, (...args) => {
-			eventFile.invoke(...args);
+			try {
+				eventFile.invoke(...args);
+			} catch (error) {
+				console.error(`Error occurred while handling event "${eventFile.name}":`, error);
+			}
 		});
 	}
 }
