@@ -27,7 +27,7 @@ async function invoke(client) {
 
     // vérification si le message a déjà été envoyé
     const messages = await channel.messages.fetch({ limit: 50 });
-    const alreadySent = messages.some(msg => msg.author.id === client.user.id && msg.components.length > 0 && msg.content === 'Choisissez un rôle :');
+    const alreadySent = messages.some(msg => msg.author.id === client.user.id && msg.components.length > 0 && msg.content === 'Choisissez un Parcours :');
     if (!alreadySent) {
 		const role1Button = new ButtonBuilder()
 			.setCustomId('IHM')
@@ -50,7 +50,7 @@ async function invoke(client) {
 		const row = new ActionRowBuilder().addComponents(role1Button, role2Button, role3Button);
 
 		await channel.send({
-			content: 'Choisissez un rôle :',
+			content: 'Choisissez un Parcours :',
 			components: [row],
 		});
 	}
@@ -73,9 +73,9 @@ async function invoke(client) {
 			.setCustomId('Groupe52')
 			.setEmoji('5️⃣2️⃣')
 			.setLabel('Groupe 52')
-			.setStyle(ButtonStyle.Success);
+			.setStyle(ButtonStyle.Secondary);
 
-		const row2 = new ActionRowBuilder().addComponents(groupe1Button, groupe2Button);
+		const row2 = new ActionRowBuilder().addComponents(groupe1Button, groupe2Button, groupe3Button);
 
 		await channel.send({
 			content: 'Et votre groupe :',
