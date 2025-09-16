@@ -55,8 +55,7 @@ async function invoke(client) {
 		});
 	}
 
-    const messages2 = await channel.messages.fetch({ limit: 50 });
-    const alreadySent2 = messages2.some(msg => msg.author.id === client.user.id && msg.components.length > 0 && msg.content === 'Choisissez un groupe :');
+    const alreadySent2 = messages.some(msg => msg.author.id === client.user.id && msg.components.length > 0 && msg.content === 'Et votre groupe :');
     if (!alreadySent2) {
 		const groupe1Button = new ButtonBuilder()
 			.setCustomId('Groupe42')
@@ -79,7 +78,7 @@ async function invoke(client) {
 		const row2 = new ActionRowBuilder().addComponents(groupe1Button, groupe2Button);
 
 		await channel.send({
-			content: 'Choisissez un groupe :',
+			content: 'Et votre groupe :',
 			components: [row2],
 		});
 	}
