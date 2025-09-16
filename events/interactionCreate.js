@@ -56,8 +56,9 @@ async function invoke(interaction) {
             IHM: '1408465905935192186',
             SDL: '1408466808620581037',
             Intru: '1409253453305217174',
-            Groupe4: '1410920994461188126',
-            Groupe5: '1410921062253858927'
+            Groupe42: '1410920994461188126',
+            Groupe51: '1410921062253858927',
+            Groupe52: '1417437257652113408'
         };
         const roleId = roleMap[interaction.customId];
         if (!roleId) return;
@@ -68,6 +69,11 @@ async function invoke(interaction) {
             await member.roles.remove(roleId);
             await interaction.editReply({ content: 'Role ' + interaction.customId + ' enlevé!' });
         } else {
+            const groupeRoles = ['1410920994461188126', '1410921062253858927', '1417437257652113408'];
+            if (groupeRoles.includes(roleId)) {
+                // enlever les autres rôles de groupe
+                await member.roles.remove(groupeRoles);
+            }
             await member.roles.add(roleId);
             await interaction.editReply({ content: 'Role ' + interaction.customId + ' ajouté!' });
         }

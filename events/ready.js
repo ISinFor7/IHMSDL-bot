@@ -59,15 +59,21 @@ async function invoke(client) {
     const alreadySent2 = messages2.some(msg => msg.author.id === client.user.id && msg.components.length > 0 && msg.content === 'Choisissez un groupe :');
     if (!alreadySent2) {
 		const groupe1Button = new ButtonBuilder()
-			.setCustomId('Groupe4')
-			.setEmoji('4️⃣')
-			.setLabel('Groupe 4')
+			.setCustomId('Groupe42')
+			.setEmoji('4️⃣2️⃣')
+			.setLabel('Groupe 42')
 			.setStyle(ButtonStyle.Primary);
 
 		const groupe2Button = new ButtonBuilder()
-			.setCustomId('Groupe5')
-			.setEmoji('5️⃣')
-			.setLabel('Groupe 5')
+			.setCustomId('Groupe51')
+			.setEmoji('5️⃣1️⃣')
+			.setLabel('Groupe 51')
+			.setStyle(ButtonStyle.Success);
+			
+		const groupe3Button = new ButtonBuilder()
+			.setCustomId('Groupe52')
+			.setEmoji('5️⃣2️⃣')
+			.setLabel('Groupe 52')
 			.setStyle(ButtonStyle.Success);
 
 		const row2 = new ActionRowBuilder().addComponents(groupe1Button, groupe2Button);
