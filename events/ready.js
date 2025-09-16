@@ -59,19 +59,19 @@ async function invoke(client) {
     if (!alreadySent2) {
 		const groupe1Button = new ButtonBuilder()
 			.setCustomId('Groupe42')
-			.setEmoji('4️⃣2️⃣')
+			.setEmoji('1417447503271432294')
 			.setLabel('Groupe 42')
 			.setStyle(ButtonStyle.Primary);
 
 		const groupe2Button = new ButtonBuilder()
 			.setCustomId('Groupe51')
-			.setEmoji('5️⃣1️⃣')
+			.setEmoji('1417447003805319170')
 			.setLabel('Groupe 51')
 			.setStyle(ButtonStyle.Success);
 			
 		const groupe3Button = new ButtonBuilder()
 			.setCustomId('Groupe52')
-			.setEmoji('5️⃣2️⃣')
+			.setEmoji('1417447002547027968')
 			.setLabel('Groupe 52')
 			.setStyle(ButtonStyle.Secondary);
 
